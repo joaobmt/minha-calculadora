@@ -5,15 +5,19 @@ def sum(a, b):
 def subtract(a, b):
     return a - b
 
+def multiply(a, b):
+    return a * b
+
 while True:
     print("Select operation:")
     print("1. Sum")
     print("2. Subtract")
-    print("3. Exit")
+    print("3. Multiply")
+    print("4. Exit")
 
-    choice = input("Enter choice (1/2/3): ")
+    choice = input("Enter choice (1/2/3/4): ")
 
-    if choice in ['1', '2']:
+    if choice in ['1', '2', '3']:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
 
@@ -21,7 +25,9 @@ while True:
             print(f"The result is: {sum(num1, num2)}")
         elif choice == '2':
             print(f"The result is: {subtract(num1, num2)}")
-    elif choice == '3':
+        elif choice == '3':
+            print(f"The result is: {multiply(num1, num2)}")
+    elif choice == '4':
         print("Exiting the program.")
         break
     else:
