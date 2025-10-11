@@ -8,16 +8,22 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
+def divide(a, b):
+    if b == 0:
+        return "Error! Division by zero."
+    return a / b
+
 while True:
     print("Select operation:")
     print("1. Sum")
     print("2. Subtract")
     print("3. Multiply")
-    print("4. Exit")
+    print("4. Divide")
+    print("5. Exit")
 
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1/2/3/4/5): ")
 
-    if choice in ['1', '2', '3']:
+    if choice in ['1', '2', '3', '4']:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
 
@@ -27,7 +33,9 @@ while True:
             print(f"The result is: {subtract(num1, num2)}")
         elif choice == '3':
             print(f"The result is: {multiply(num1, num2)}")
-    elif choice == '4':
+        elif choice == '4':
+            print(f"The result is: {divide(num1, num2)}")
+    elif choice == '5':
         print("Exiting the program.")
         break
     else:
