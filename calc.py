@@ -14,6 +14,10 @@ def divide(a, b):
         return "Error! Division by zero."
     return a / b
 
+def percentage(a, b):
+    return (a * b) / 100
+
+
 while True:
     print("Select operation:")
     print("1. Sum")
